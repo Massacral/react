@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* CSS para a versão com imagem maior */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.testimonial-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.testimonial-card:hover .testimonial-image {
+  transform: scale(1.1);
+}
+
+.testimonial-content {
+  padding: 25px;
+}
+
+.testimonial-rating {
+  margin-bottom: 15px;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-right: 3px;
+}
+
+.testimonial-text {
+  color: var(--gray-medium);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-footer {
+  text-align: right;
+  border-top: 1px solid var(--gray-light);
+  padding-top: 15px;
+}
+
+.testimonial-footer h3 {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.testimonial-date {
+  color: var(--primary-gold);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}

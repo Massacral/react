@@ -1,0 +1,334 @@
+/* ===== PÁGINA DE DEPOIMENTOS ===== */
+.depoimentos-page {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gray-dark);
+    padding-top: 120px; /* Compensa a altura do header fixo */
+  }
+  
+  /* Header */
+  .depoimentos-header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1a2a3a 100%);
+    color: var(--white);
+    padding: 80px 0 60px;
+    text-align: center;
+  }
+  
+  .depoimentos-header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  
+  .depoimentos-header .header-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  .estatisticas {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+  }
+  
+  .estatistica-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .estatistica-numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-gold);
+    line-height: 1;
+  }
+  
+  .estatistica-label {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Lista de depoimentos */
+  .todos-depoimentos {
+    padding: 80px 0;
+    background: var(--white);
+  }
+  
+  .todos-depoimentos h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+  }
+  
+  /* Filtros */
+  .filtros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .filtro-btn {
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid var(--gray-light);
+    color: var(--gray-medium);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
+  
+  .filtro-btn:hover,
+  .filtro-btn.active {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--white);
+  }
+  
+  .filtro-select {
+    padding: 10px 25px;
+    border: 1px solid var(--gray-light);
+    color: var(--gray-medium);
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    background: var(--white);
+  }
+  
+  /* Itens de depoimento */
+  .depoimentos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .depoimento-item {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--gray-light);
+  }
+  
+  .depoimento-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: var(--primary-gold);
+  }
+  
+  .depoimento-imagem {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-gold);
+  }
+  
+  .depoimento-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .depoimento-conteudo {
+    flex: 1;
+  }
+  
+  .depoimento-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .depoimento-cabecalho h3 {
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .depoimento-data {
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+  }
+  
+  .depoimento-info {
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .depoimento-tratamento {
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .depoimento-tratamento strong {
+    color: var(--primary-gold);
+    font-weight: 600;
+  }
+  
+  .depoimento-rating {
+    margin-bottom: 15px;
+  }
+  
+  .depoimento-rating .star {
+    color: #ffd700;
+    font-size: 1.1rem;
+    margin-right: 3px;
+  }
+  
+  .depoimento-texto {
+    color: var(--gray-medium);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  
+  /* Paginação */
+  .paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  
+  .page-btn {
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid var(--gray-light);
+    color: var(--gray-medium);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    min-width: 40px;
+  }
+  
+  .page-btn:hover:not(:disabled),
+  .page-btn.active {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--white);
+  }
+  
+  .page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* CTA */
+  .cta-depoimento {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-gold) 0%, #d4b15c 100%);
+    text-align: center;
+  }
+  
+  .cta-depoimento h2 {
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  
+  .cta-depoimento p {
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+  
+  .btn-cta {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--primary-dark);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-cta:hover {
+    background: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .depoimentos-header h1 {
+      font-size: 2.2rem;
+    }
+    
+    .estatisticas {
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .estatistica-numero {
+      font-size: 2rem;
+    }
+    
+    .depoimento-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .depoimento-cabecalho {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .filtros {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .filtro-btn,
+    .filtro-select {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .depoimentos-header {
+      padding: 60px 0 40px;
+    }
+    
+    .depoimentos-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .estatisticas {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .paginacao {
+      flex-wrap: wrap;
+    }
+  }
